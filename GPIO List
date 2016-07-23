@@ -1,0 +1,6 @@
+This doc will serve as a list of used GPIO pins for allinvolved Raspberry Pi units.
+
+Light and interface control unit:
+
+GPIO 20: input
+
