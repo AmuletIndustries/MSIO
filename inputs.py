@@ -11,13 +11,7 @@ def start_key_check(key):
     time.sleep(0.1)
     if GPIO.input(20):
         key = True
-        keyChange = 1
     else:
         key = False
-        keyChange = 1
-
-    while keyChange == 1:
-        print "Start Key has changed possition."
-        keyChange = 0
 
     return key
