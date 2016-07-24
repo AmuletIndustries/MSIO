@@ -8,7 +8,7 @@ GPIO.setup(20, GPIO.IN)
 def start_key_check(key):
 #This function has a timer and can be looped
     keyChange = 0
-    time.sleep(0.1)
+    time.sleep(0.5)
     if GPIO.input(20):
         key = True
     else:
