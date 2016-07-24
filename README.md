@@ -7,4 +7,3 @@ This is a WIP system to access and control superfluous aspects of the Westport L
 
 RPi.GPIO
 
-nose-testconfig v0.10
