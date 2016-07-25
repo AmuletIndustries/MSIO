@@ -8,8 +8,9 @@ GPIO.setup(21, GPIO.IN)
 GPIO.setup(26, GPIO.IN)
 GPIO.setup(16, GPIO.IN)
 
+
 def start_key_check(key):
-#This function has a timer and is looped
+    # This function has a timer and is looped
     time.sleep(0.5)
     if GPIO.input(20):
         key = True
@@ -18,18 +19,21 @@ def start_key_check(key):
 
     return key
 
+
 def red_switch(redSwitch):
-#This function has a timer and is looped
-#WARNING the timer of this function is short!
+    # This function has a timer and is looped
+    # WARNING the timer of this function is short!
     time.sleep(0.05)
     if GPIO.input(21):
         redSwitch = True
         print "redSwitch set to True"
 
     return redSwitch
+
+
 def green_switch(greenSwitch):
-#This function has a timer and is looped
-#WARNING the timer of this function is short!
+    # This function has a timer and is looped
+    # WARNING the timer of this function is short!
     time.sleep(0.05)
     if GPIO.input(26):
         redSwitch = True
@@ -37,9 +41,10 @@ def green_switch(greenSwitch):
 
     return greenSwitch
 
+
 def red_switch(blueSwitch):
-#This function has a timer and is looped
-#WARNING the timer of this function is short!
+    # This function has a timer and is looped
+    # WARNING the timer of this function is short!
     time.sleep(0.05)
     if GPIO.input(16):
         blueSwitch = True
