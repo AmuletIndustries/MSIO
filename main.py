@@ -8,6 +8,10 @@ settings.init()
 DO NOT CALL NON-TIMED FUNCTIONS IN THIS FUNCTION
 """
 
+inf_loop1(key)
+inf_loop2(redSwitch)
+inf_loop3(redSwitch)
+
 def inf_loop1(key):
 #This loop tests solely for the control key
     while True:
