@@ -3,7 +3,7 @@ This doc will serve as a list of used GPIO pins for allinvolved Raspberry Pi uni
 Light and interface control unit:
 
 GPIO 20: key input
-GPIO 4: output RED light control TESTING ONLY
+GPIO 6: output RED light control TESTING ONLY
 GPIO 21: RED button input
 GPIO 26: GREEN button input
 GPIO 16: BLUE button input
