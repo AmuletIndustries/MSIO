@@ -2,7 +2,7 @@ import RPi.GPIO as GPIO
 import time
 import settings
 
-GPIO.setmode(GPIO.BCM)
+# GPIO.setmode(GPIO.BOARD)
 GPIO.setup(20, GPIO.IN)
 GPIO.setup(21, GPIO.IN)
 GPIO.setup(26, GPIO.IN)
