@@ -29,9 +29,16 @@ def inf_loop2(redSwitch, greenSwitch, blueSwitch):
 
 def inf_loop3(redSwitch, greenSwitch, blueSwitch):
     # This loop turns on the lights
-    if redSwitch:
-        outputs.light_red_on()
-        print "RED lights turned on"
-    elif not redSwitch:
-        outputs.light_red_off()
-        print "RED lights turned off"
+    while True:
+        if redSwitch:
+            outputs.light_red_on()
+            print("RED light function on was called")
+        elif not redSwitch:
+            outputs.light_red_off()
+            print("RED light function off was called")
+        elif greenSwitch:
+            outputs.light_red_on()
+            print("GREEN light function on was called")
+        elif not greenSwitch:
+            outputs.light_red_off()
+            print("GREEN light function off was called")

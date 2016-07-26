@@ -8,4 +8,4 @@ def init():
     greenSwitch = False
     global blueSwitch
     blueSwitch = False
-    print "Global variables initialized"
+    print("Global variables initialized")
