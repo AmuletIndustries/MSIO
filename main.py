@@ -12,33 +12,35 @@ DO NOT CALL NON-TIMED FUNCTIONS IN THESE FUNCTIONS
 def inf_loop1():
     # This loop tests solely for the control key
     while True:
-        inputs.start_key_check()  # Function contains sleep of 0.5
+        inputs.start_key_check(settings.key, settings.keyChange)
+        # Preceding function sleeps for 0.5
+        inf_loop2()
 
 
-def inf_loop2(redSwitch, greenSwitch, blueSwitch):
+def inf_loop2():
     # This loop tests for the three color selection buttons
-    while True:
-        inputs.red_switch(redSwitch)  # Function contains a sleep of 0.05
-        return redSwitch
+    # while True:
+    inputs.red_switch(settings.redSwitch)  # Function sleeps for 0.05
+    # return redSwitch
 
 
-def inf_loop3(redSwitch, greenSwitch, blueSwitch):
+def inf_loop3():
     # This loop turns on the lights
     while True:
-        if redSwitch:
+        if settings.redSwitch:
             outputs.light_red_on()
             print("RED light function on was called")
-        elif not redSwitch:
+        elif not settings.redSwitch:
             outputs.light_red_off()
             print("RED light function off was called")
-        elif greenSwitch:
+        elif settings.greenSwitch:
             outputs.light_red_on()
             print("GREEN light function on was called")
-        elif not greenSwitch:
+        elif not settings.greenSwitch:
             outputs.light_red_off()
             print("GREEN light function off was called")
 
 
 inf_loop1()
-inf_loop2(redSwitch, greenSwitch, blueSwitch)
-inf_loop3(redSwitch, greenSwitch, blueSwitch)
+inf_loop2()
+inf_loop3()

@@ -7,18 +7,24 @@ import settings
 gpio = GPIO.get_platform_gpio()
 
 gpio.setup(20, GPIO.IN)
-gpio.setup(21, GPIO.IN)
+gpio.setup(19, GPIO.IN)
 gpio.setup(26, GPIO.IN)
 gpio.setup(16, GPIO.IN)
 
 
-def start_key_check(key):
+def start_key_check(key, keyChange):
     # This function has a timer and is looped
     time.sleep(0.5)
     if gpio.input(20):
-        key = True
+        if not key:
+            print("Key is ON")
+            keyChange = True
+            key = True
     else:
         key = False
+        if keyChange:
+            print("Key is OFF")
+            keyChange = False
 
     return key
 
@@ -27,7 +33,7 @@ def red_switch(redSwitch):
     # This function has a timer and is looped
     # WARNING the timer of this function is short!
     time.sleep(0.05)
-    if gpio.input(21):
+    if gpio.input(19):
         redSwitch = True
         print("redSwitch set to True")
 
