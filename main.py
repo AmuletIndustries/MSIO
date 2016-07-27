@@ -12,17 +12,16 @@ DO NOT CALL NON-TIMED FUNCTIONS IN THESE FUNCTIONS
 def inf_loop1():
     # This loop tests solely for the control key
     while True:
-        inputs.start_key_check(settings.key, settings.keyChange)
+        inputs.start_key_check()
         # Preceding function sleeps for 0.05
-        inf_loop2(settings.redSwitch)
-        inf_loop3(redSwitch)
+        inf_loop2()
+        inf_loop3(inputs.redSwitch)
 
 
-def inf_loop2(redSwitch):
+def inf_loop2():
     # This loop tests for the three color selection buttons
     # while True:
-    inputs.red_switch(redSwitch)  # Function sleeps for 0.05
-    return redSwitch
+    inputs.red_switch()  # Function sleeps for 0.05
 
 
 def inf_loop3(redSwitch):
