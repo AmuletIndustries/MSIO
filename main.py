@@ -4,20 +4,15 @@ import outputs
 
 settings.init()
 
-"""WARNING: the proceding functions is an infinite loop!
-DO NOT CALL NON-TIMED FUNCTIONS IN THIS FUNCTION
+"""WARNING: the proceding functions are an infinite loop!
+DO NOT CALL NON-TIMED FUNCTIONS IN THESE FUNCTIONS
 """
 
-inf_loop1(key)
-inf_loop2(redSwitch, greenSwitch, blueSwitch)
-inf_loop3(redSwitch, greenSwitch, blueSwitch)
 
-
-def inf_loop1(key):
+def inf_loop1():
     # This loop tests solely for the control key
     while True:
-        inputs.start_key_check(key)  # Function contains sleep of 0.5
-        return key
+        inputs.start_key_check()  # Function contains sleep of 0.5
 
 
 def inf_loop2(redSwitch, greenSwitch, blueSwitch):
@@ -42,3 +37,8 @@ def inf_loop3(redSwitch, greenSwitch, blueSwitch):
         elif not greenSwitch:
             outputs.light_red_off()
             print("GREEN light function off was called")
+
+
+inf_loop1()
+inf_loop2(redSwitch, greenSwitch, blueSwitch)
+inf_loop3(redSwitch, greenSwitch, blueSwitch)

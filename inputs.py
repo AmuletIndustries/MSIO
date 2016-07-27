@@ -1,6 +1,7 @@
 import RPi.GPIO
 import Adafruit_GPIO as GPIO
 import time
+import settings
 
 # GPIO.setmode(GPIO.BOARD)
 gpio = GPIO.get_platform_gpio()
