@@ -13,35 +13,34 @@ def inf_loop1():
     # This loop tests solely for the control key
     while True:
         inputs.start_key_check(settings.key, settings.keyChange)
-        # Preceding function sleeps for 0.5
-        inf_loop2()
-        inf_loop3()
+        # Preceding function sleeps for 0.05
+        inf_loop2(settings.redSwitch)
+        inf_loop3(redSwitch)
 
 
-def inf_loop2():
+def inf_loop2(redSwitch):
     # This loop tests for the three color selection buttons
     # while True:
-    inputs.red_switch(settings.redSwitch)  # Function sleeps for 0.05
-    # return redSwitch
+    inputs.red_switch(redSwitch)  # Function sleeps for 0.05
+    return redSwitch
 
 
-def inf_loop3():
+def inf_loop3(redSwitch):
     # This loop turns on the lights
     # while True:
-    if settings.redSwitch:
-        outputs.light_red_on(settings.key)
+    print("inf_loop3 running")
+    if redSwitch:
         print("RED light function on was called")
-    elif not settings.redSwitch:
-        outputs.light_red_off(settings.key)
+        outputs.light_red_on(settings.key)
+    else:
         print("RED light function off was called")
-    elif settings.greenSwitch:
+        outputs.light_red_off(settings.key)
+    """if settings.greenSwitch:
         outputs.light_red_on()
         print("GREEN light function on was called")
-    elif not settings.greenSwitch:
+    else:
         outputs.light_red_off()
-        print("GREEN light function off was called")
+        print("GREEN light function off was called")"""
 
 
 inf_loop1()
-inf_loop2()
-inf_loop3()

@@ -14,7 +14,7 @@ gpio.setup(16, GPIO.IN)
 
 def start_key_check(key, keyChange):
     # This function has a timer and is looped
-    time.sleep(0.5)
+    time.sleep(0.05)
     if gpio.input(20):
         if not key:
             print("Key is ON")

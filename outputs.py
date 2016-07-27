@@ -1,5 +1,6 @@
 import RPi.GPIO
 import Adafruit_GPIO as GPIO
+import settings
 
 gpio = GPIO.get_platform_gpio()
 gpio.setup(25, GPIO.OUT)  # Color RED output
