@@ -30,10 +30,10 @@ def inf_loop3(redSwitch):
     print("inf_loop3 running")
     if redSwitch:
         print("RED light function on was called")
-        outputs.light_red_on(settings.key)
+        outputs.light_red_on(inputs.key)
     else:
         print("RED light function off was called")
-        outputs.light_red_off(settings.key)
+        outputs.light_red_off(inputs.key)
     """if settings.greenSwitch:
         outputs.light_red_on()
         print("GREEN light function on was called")

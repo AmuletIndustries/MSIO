@@ -15,13 +15,14 @@ gpio.setup(16, GPIO.IN)
 def start_key_check():
     # This function has a timer and is looped
     time.sleep(0.05)
-    global key
     if gpio.input(20):
-        if not key:
+        if settings.key:
             print("Key is ON")
             keyChange = True
+            global key
             key = True
     else:
+        global key
         key = False
         if keyChange:
             print("Key is OFF")
