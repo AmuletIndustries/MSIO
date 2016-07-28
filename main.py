@@ -14,14 +14,7 @@ def inf_loop1():
     while True:
         inputs.start_key_check()
         # Preceding function sleeps for 0.05
-        inf_loop2()
         inf_loop3()
-
-
-def inf_loop2():
-    # This loop tests for the three color selection buttons
-    # while True:
-    inputs.red_switch()  # Function sleeps for 0.05
 
 
 def inf_loop3():
