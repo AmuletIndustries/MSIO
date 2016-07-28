@@ -38,23 +38,29 @@ def red_switch():
         return False
 
 
-def green_switch(greenSwitch):
+def green_switch():
     # This function has a timer and is looped
     # WARNING the timer of this function is short!
     time.sleep(0.05)
     if gpio.input(26):
+        global greenSwitch
         greenSwitch = True
         print("greenSwitch set to True")
+        return True
+    else:
+        print("greenSwitch set to False")
+        return False
 
-    return greenSwitch
 
-
-def blue_switch(blueSwitch):
+def blue_switch():
     # This function has a timer and is looped
     # WARNING the timer of this function is short!
     time.sleep(0.05)
-    if GPIO.input(16):
+    if gpio.input(16):
+        global blueSwitch
         blueSwitch = True
         print("blueSwitch set to True")
-
-    return blueSwitch
+        return True
+    else:
+        print("blueSwitch set to False")
+        return False
