@@ -15,7 +15,7 @@ def inf_loop1():
         inputs.start_key_check()
         # Preceding function sleeps for 0.05
         inf_loop2()
-        inf_loop3(inputs.redSwitch)
+        inf_loop3()
 
 
 def inf_loop2():
@@ -24,11 +24,11 @@ def inf_loop2():
     inputs.red_switch()  # Function sleeps for 0.05
 
 
-def inf_loop3(redSwitch):
+def inf_loop3():
     # This loop turns on the lights
     # while True:
     print("inf_loop3 running")
-    if redSwitch:
+    if inputs.red_switch():
         print("RED light function on was called")
         outputs.light_red_on(inputs.key)
     else:
