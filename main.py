@@ -24,21 +24,12 @@ def ctrl():
     if inputs.red_switch():
         print("RED light function on was called")
         outputs.light_red_on(inputs.key)
-    else:
-        print("RED light function off was called")
-        outputs.light_red_off(inputs.key)
     if inputs.green_switch():
         print("GREEN light function on was called")
         outputs.light_green_on(inputs.key)
-    else:
-        print("GREEN light function off was called")
-        outputs.light_green_off(inputs.key)
     if inputs.blue_switch():
         print("BLUE light function on was called")
         outputs.light_blue_on(inputs.key)
-    else:
-        print("BLUE light function off was called")
-        outputs.light_blue_off(inputs.key)
 
 
 inf_loop1()
